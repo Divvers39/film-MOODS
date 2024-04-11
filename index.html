@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+
+</head> 
+<style>
+    html{
+        background: linear-gradient(rgb(69, 17, 212),rgb(252, 252, 252)) no-repeat center center fixed;
+        background-size: cover;
+    }
+    body {
+        color: black;
+        height: 100%;
+    }
+    a {
+        color: blue;
+    }
+    video {
+        width:600px;
+    }
+    .video {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .sliders {
+        display: flex;
+        justify-items: center;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2%;
+    }
+    .sliders div {
+        width: 200px;
+    }
+    #redSlider, #greenSlider, #blueSlider {
+        display: none;
+    }
+    .info{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 10px;
+        padding: 3px;
+        width: 20%;
+        text-align: center;
+        background-color: rgba(211, 202, 202, 0.493);
+        border-radius: 10px;
+        
+    }
+    
+   
+</style>
+
+
+
+<body id="body">
+<h1>film MOODS</h1> 
+<p class = "info">When selecting a new color, pausing will create the effect or switching into a different one. </p>
+<input id="inputBox"type="file" accept=".mp4">
+
+
+    <select  id="selection">
+        <option value="grey">Colors</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+        <option value="brown">Brown</option>
+        <option value="custom">Custom</option>
+    </select>
+<div class="sliders">
+
+    <div class="saturation" id="saturationSlider"> 
+        <label for="saturation">Saturation value</label>
+        <input type="range" max=150 min=0 id="saturation">
+        </div>
+        <br>
+        
+        <div class="red" id="redSlider">
+        <label for="red">Red value</label>    
+        <input type="range" max=75 min=-75 id="red" >
+        </div>
+        
+        <div class="green"id="greenSlider"> 
+        <label for="green">Green value</label>
+        <input type="range" max=75 min=-75 id="green">
+        </div>
+        
+        <div class="blue"id="blueSlider">
+        <label for="blue">Blue value</label>
+        <input type="range" max=75 min=-75 id="blue">
+        </div>
+        
+</div>
+
+<button id ="start">Start</button>
+<button id ="stop">Stop</button>
+<button id ="export">Export</button>
+
+
+<div class="video">
+<video id="video" >
+</video>
+<canvas id="canvas" width="600px" height="338px">
+</canvas>
+</div>
+
+
+<div id="container">
+
+</div>
+   
+</body>
+</html>
